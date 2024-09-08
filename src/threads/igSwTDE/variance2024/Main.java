@@ -1,17 +1,14 @@
 package threads.igSwTDE.variance2024;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
-        List<Integer> data = new ArrayList<>();
-        for (int i = 1; i <= 100; i++) {
-            data.add(i);
-        }
+    public static void main(String[] args) throws Exception {
+        List<Integer> list = Arrays.asList(10, 20, 30, 40, 50, 60);
 
-        int subIntervals = 4;  // Numero di sottointervalli/thread
-        float variance = VarianceCalculator.calculateParallelVariance(data, subIntervals);
-        System.out.println("Varianza: " + variance);
+        double result = VarianceCalculator.calculateParallelVariance(list, 3);
+
+        System.out.println("The calculated variance is: " + result);
     }
 }
