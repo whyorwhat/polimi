@@ -11,7 +11,7 @@ public class MovingAverageCalculator {
         }
 
         Object lock = new Object();
-        double[] result = new double[data.length - windowSize + 1];
+        double[] result = new double[data.length - windowSize + 1]; // Length of return array
 
         List<Thread> threads = new ArrayList<>();
         for(int i = 0; i < data.length; i++){
