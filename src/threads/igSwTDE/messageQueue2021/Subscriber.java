@@ -1,13 +1,11 @@
 package threads.igSwTDE.messageQueue2021;
 
-import java.util.Random;
-
 import static java.lang.Thread.sleep;
 
 public class Subscriber implements Runnable {
 
-    private MessageQueue queue;
-    private int time;
+    private final MessageQueue queue;
+    private final int time;
 
     public Subscriber(MessageQueue queue, int time) {
         this.queue = queue;

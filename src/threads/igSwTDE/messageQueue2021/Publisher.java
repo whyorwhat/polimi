@@ -6,8 +6,8 @@ import static java.lang.Thread.sleep;
 
 public class Publisher implements Runnable{
 
-    private MessageQueue queue;
-    private int time;
+    private final MessageQueue queue;
+    private final int time;
 
     public Publisher(MessageQueue queue, int time) {
         this.queue = queue;
@@ -27,6 +27,5 @@ public class Publisher implements Runnable{
                 throw new RuntimeException();
             }
         }
-
     }
 }
