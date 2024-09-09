@@ -7,5 +7,4 @@ public class Main {
         queue.enqueue(10);
         queue.dequeue();
     }
-
 }
