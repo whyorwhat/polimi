@@ -15,7 +15,7 @@ public class MessageQueue <T>{
     }
 
     public void enqueue(T message) {
-        if(data.size() <= size){
+        if(data.size() < size){
             // CODA NON PIENA
             data.add(message);
             System.out.println("Added to queue: " + message);
